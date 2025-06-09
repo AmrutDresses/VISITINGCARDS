@@ -23,13 +23,18 @@
     }
 
     .card {
-      max-width: 500px;
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
-      padding: 25px;
-      text-align: center;
-    }
+  width: 100vw;        /* Full viewport width */
+  height: 100vh;       /* Full viewport height */
+  max-width: 414px;    /* Don't exceed iPhone 11 width */
+  max-height: 896px;   /* Don't exceed iPhone 11 height */
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+  padding: 25px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
 
     h1 {
       color: #800000;
