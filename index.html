@@ -9,9 +9,7 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      /* Original: background: url('https://i.imgur.com/yzlQyaL.jpg') no-repeat center center fixed; */
-      /* Original: background-size: cover; */
-      background-color: black; /* Changed to black background color */
+      background-color: black; /* Keeping black background */
     }
 
     .overlay {
@@ -34,7 +32,11 @@
       padding: 25px;
       text-align: center;
       box-sizing: border-box;
+      display: flex; /* Added flex for vertical centering within card */
+      flex-direction: column; /* Stack content vertically */
+      justify-content: center; /* Center content vertically */
     }
+
 
     h1 {
       color: #800000;
@@ -47,17 +49,31 @@
       color: #444;
     }
 
+    .icons {
+      display: flex; /* Enable flexbox for icons */
+      flex-wrap: wrap; /* Allow icons to wrap to the next line */
+      justify-content: center; /* Center icons horizontally */
+      margin-top: 20px; /* Add some space above icons */
+    }
+
     .icons a {
-      margin: 12px;
-      font-size: 26px;
+      flex: 0 0 50%; /* Each icon takes 50% width to allow 2 per row */
+      max-width: 150px; /* Limit individual icon width for larger screens */
+      margin: 15px 0; /* Increase vertical margin, remove horizontal to let flexbox handle it */
+      font-size: 48px; /* Increased icon size (from 26px) */
       text-decoration: none;
       transition: transform 0.3s ease;
+      display: flex; /* Flexbox for icon and text if we add it later */
+      flex-direction: column; /* Stack icon and text */
+      align-items: center; /* Center icon horizontally */
+      justify-content: center; /* Center icon vertically */
     }
 
     .icons a:hover {
-      transform: scale(1.2);
+      transform: scale(1.1); /* Slightly smaller hover effect for larger icons */
     }
 
+    /* Icon Colors - unchanged */
     .fa-instagram { color: #E1306C; }
     .fa-youtube { color: #FF0000; }
     .fa-whatsapp { color: #25D366; }
@@ -78,7 +94,7 @@
         <a href="https://wa.me/917405235350" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="https://www.instagram.com/amrutdresses1983/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/@amrutdresses" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-        <a href="https://maps.app.goo.gl/E7SYcBx9jaEnzRPNA?g_st=awb" target="_blank" title="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
+        <a href="https://www.google.com/maps/dir/?api=1&destination=Shyam+Plaza+5/6,+Opp.+Jain+Derasar,+Kamdar+Colony,+Street+No+6,+Jamnagar,+Gujarat+361006" target="_blank" title="Google Maps"><i class="fas fa-map-marker-alt"></i></a>
       </div>
     </div>
   </div>
